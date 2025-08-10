@@ -1,14 +1,19 @@
 {
-  "name": "roblox-verification-bot",
+  "name": "discord-roblox-verification-bot",
   "version": "1.0.0",
-  "description": "Discord bot for Roblox booster verification",
+  "description": "Discord bot for Roblox verification with code system",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "dev": "node index.js"
+    "dev": "nodemon index.js"
   },
   "dependencies": {
-    "discord.js": "^14.14.1"
+    "discord.js": "^14.14.1",
+    "express": "^4.18.2",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
   },
   "engines": {
     "node": ">=16.0.0"
@@ -18,7 +23,5 @@
     "bot",
     "roblox",
     "verification"
-  ],
-  "author": "Chesborge",
-  "license": "MIT"
+  ]
 }
