@@ -273,16 +273,19 @@ client.on('interactionCreate', async (interaction) => {
 
 // Register slash commands
 async function registerCommands() {
+    await client.application.fetch(); // IMPORTANT
+
     const commands = [verifyCommand, statusCommand];
-    
+
     try {
-        console.log('Started refreshing application (/) commands.');
+        console.log("Registering slash commands...");
         await client.application.commands.set(commands);
-        console.log('Successfully reloaded application (/) commands.');
-    } catch (error) {
-        console.error('Error registering commands:', error);
+        console.log("Commands registered.");
+    } catch (err) {
+        console.error("Error registering slash commands:", err);
     }
 }
+
 
 // Bot ready event
 client.once('ready', () => {
